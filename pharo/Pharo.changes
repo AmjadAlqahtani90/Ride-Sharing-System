@@ -1,0 +1,686 @@
+----QUIT----2026-09-23T11:08:25.681307+02:00 Pharo13.0-SNAPSHOT-64bit-d7c6f761d5.image priorSource: 0!----QUIT----2026-09-23T11:08:25.681906+02:00 Pharo13.0-SNAPSHOT-64bit-d7c6f761d5.image priorSource: 0!----QUIT----2026-09-23T11:08:45.934508+02:00 Pharo13.0-SNAPSHOT-64bit-d7c6f761d5.image priorSource: 104!----QUIT----2026-09-23T11:08:45.935818+02:00 Pharo13.0-SNAPSHOT-64bit-d7c6f761d5.image priorSource: 208!----QUIT----2026-09-23T11:08:46.428253+02:00 Pharo13.0-SNAPSHOT-64bit-d7c6f761d5.image priorSource: 314!----QUIT----2026-09-23T11:08:46.428846+02:00 Pharo13.0-SNAPSHOT-64bit-d7c6f761d5.image priorSource: 420!!Ride methodsFor: 'initialization'!initializeWithID: anID pickup: aPickup dropoff: aDropoff distance: aDistance
+    rideID := anID.
+    pickupLocation := aPickup.
+    dropoffLocation := aDropoff.
+    distance := aDistance.
+    ^ self
+! !!Driver methodsFor: 'initialization'!initializeWithID: anID name: aName rating: aRating
+    driverID := anID.
+    name := aName.
+    rating := aRating.
+    assignedRides := OrderedCollection new.
+    ^ self
+! !!Rider methodsFor: 'initialization'!initializeWithID: anID name: aName
+    riderID := anID.
+    name := aName.
+    requestedRides := OrderedCollection new.
+    ^ self
+! !!Ride methodsFor: 'initialization'!initializeWithID: anID pickup: aPickup dropoff: aDropoff distance: aDistance
+    rideID := anID.
+    pickupLocation := aPickup.
+    dropoffLocation := aDropoff.
+    distance := aDistance.
+    ^ self
+! !!Driver methodsFor: 'initialization'!initializeWithID: anID name: aName rating: aRating
+    driverID := anID.
+    name := aName.
+    rating := aRating.
+    assignedRides := OrderedCollection new.
+    ^ self
+! !!Rider methodsFor: 'initialization'!initializeWithID: anID name: aName
+    riderID := anID.
+    name := aName.
+    requestedRides := OrderedCollection new.
+    ^ self
+! !!Ride methodsFor: 'initialization'!initializeWithID: anID pickup: aPickup dropoff: aDropoff distance: aDistance
+    rideID := anID.
+    pickupLocation := aPickup.
+    dropoffLocation := aDropoff.
+    distance := aDistance.
+    ^ self
+! !!Driver methodsFor: 'initialization'!initializeWithID: anID name: aName rating: aRating
+    driverID := anID.
+    name := aName.
+    rating := aRating.
+    assignedRides := OrderedCollection new.
+    ^ self
+! !!Rider methodsFor: 'initialization'!initializeWithID: anID name: aName
+    riderID := anID.
+    name := aName.
+    requestedRides := OrderedCollection new.
+    ^ self
+! !!Ride methodsFor: 'initialization'!initializeWithID: anID pickup: aPickup dropoff: aDropoff distance: aDistance
+    rideID := anID.
+    pickupLocation := aPickup.
+    dropoffLocation := aDropoff.
+    distance := aDistance.
+    ^ self
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:32:20.185894-07:00'!
+initializeWithID: anID pickup: aPickup dropoff: aDropoff distance: aDistance
+    rideID := anID.
+    pickupLocation := aPickup.
+    dropoffLocation := aDropoff.
+    distance := aDistance.
+    ^ self
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:32:20.229198-07:00'!
+distance
+    ^ distance
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:32:20.22978-07:00'!
+fare
+    self subclassResponsibility
+! !!StandardRide methodsFor: 'nil' stamp: '2026-10-03T06:32:20.230599-07:00'!
+fare
+    ^ self distance * 2
+! !!PremiumRide methodsFor: 'nil' stamp: '2026-10-03T06:32:20.233942-07:00'!
+fare
+    ^ self distance * 4
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:32:44.679314-07:00'!
+initializeWithID: anID pickup: aPickup dropoff: aDropoff distance: aDistance
+    rideID := anID.
+    pickupLocation := aPickup.
+    dropoffLocation := aDropoff.
+    distance := aDistance.
+    ^ self
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:32:44.722235-07:00'!
+distance
+    ^ distance
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:32:44.722864-07:00'!
+fare
+    self subclassResponsibility
+! !!StandardRide methodsFor: 'nil' stamp: '2026-10-03T06:32:44.723791-07:00'!
+fare
+    ^ self distance * 2
+! !!PremiumRide methodsFor: 'nil' stamp: '2026-10-03T06:32:44.728454-07:00'!
+fare
+    ^ self distance * 4
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:34:58.887137-07:00'!
+initializeWithID: anID pickup: aPickup dropoff: aDropoff distance: aDistance
+    rideID := anID.
+    pickupLocation := aPickup.
+    dropoffLocation := aDropoff.
+    distance := aDistance.
+    ^ self
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:34:58.954604-07:00'!
+rideID
+    ^ rideID
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:34:58.955151-07:00'!
+pickupLocation
+    ^ pickupLocation
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:34:58.956303-07:00'!
+dropoffLocation
+    ^ dropoffLocation
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:34:58.956816-07:00'!
+distance
+    ^ distance
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:34:58.957274-07:00'!
+fare
+    self subclassResponsibility
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:34:58.957634-07:00'!
+rideDetails
+    self subclassResponsibility
+! !!StandardRide methodsFor: 'nil' stamp: '2026-10-03T06:34:58.958342-07:00'!
+fare
+    ^ self distance * 2
+! !!StandardRide methodsFor: 'nil' stamp: '2026-10-03T06:34:58.959102-07:00'!
+rideDetails
+    Stdio stdout
+        nextPutAll: 'Standard    ';
+        nextPutAll: self rideID printString;
+        nextPutAll: '        ';
+        nextPutAll: self pickupLocation;
+        nextPutAll: '        ';
+        nextPutAll: self dropoffLocation;
+        nextPutAll: '        ';
+        nextPutAll: self distance printString;
+        nextPutAll: '          $';
+        nextPutAll: self fare printString;
+        lf
+! !!PremiumRide methodsFor: 'nil' stamp: '2026-10-03T06:34:58.959741-07:00'!
+fare
+    ^ self distance * 4
+! !!PremiumRide methodsFor: 'nil' stamp: '2026-10-03T06:34:58.960299-07:00'!
+rideDetails
+    Stdio stdout
+        nextPutAll: 'Premium     ';
+        nextPutAll: self rideID printString;
+        nextPutAll: '        ';
+        nextPutAll: self pickupLocation;
+        nextPutAll: '              ';
+        nextPutAll: self dropoffLocation;
+        nextPutAll: '       ';
+        nextPutAll: self distance printString;
+        nextPutAll: '           $';
+        nextPutAll: self fare printString;
+        lf
+! !!Driver methodsFor: 'nil' stamp: '2026-10-03T06:34:58.960985-07:00'!
+initializeWithID: anID name: aName rating: aRating
+    driverID := anID.
+    name := aName.
+    rating := aRating.
+    assignedRides := OrderedCollection new.
+    ^ self
+! !!Driver methodsFor: 'nil' stamp: '2026-10-03T06:34:58.961375-07:00'!
+addRide: aRide
+    assignedRides add: aRide
+! !!Driver methodsFor: 'nil' stamp: '2026-10-03T06:34:58.962039-07:00'!
+getDriverInfo
+    Stdio stdout
+        lf;
+        nextPutAll: '=== DRIVER INFORMATION ==='; lf;
+        nextPutAll: 'Driver ID    Name                Rating'; lf;
+        nextPutAll: '---------------------------------------'; lf;
+        nextPutAll: driverID printString;
+        nextPutAll: '            ';
+        nextPutAll: name;
+        nextPutAll: '          ';
+        nextPutAll: rating printString;
+        lf;
+        lf;
+        nextPutAll: 'Assigned Rides:'; lf;
+        nextPutAll: 'Type        Ride ID    Pickup            Dropoff        Distance    Fare'; lf;
+        nextPutAll: '--------------------------------------------------------------------------'; lf.
+
+    assignedRides do: [ :eachRide |
+        eachRide rideDetails
+    ]
+! !!Rider methodsFor: 'nil' stamp: '2026-10-03T06:34:58.962659-07:00'!
+initializeWithID: anID name: aName
+    riderID := anID.
+    name := aName.
+    requestedRides := OrderedCollection new.
+    ^ self
+! !!Rider methodsFor: 'nil' stamp: '2026-10-03T06:34:58.963009-07:00'!
+requestRide: aRide
+    requestedRides add: aRide
+! !!Rider methodsFor: 'nil' stamp: '2026-10-03T06:34:58.963583-07:00'!
+viewRides
+    Stdio stdout
+        lf;
+        nextPutAll: '=== RIDER INFORMATION ==='; lf;
+        nextPutAll: 'Rider ID     Name'; lf;
+        nextPutAll: '------------------------------'; lf;
+        nextPutAll: riderID printString;
+        nextPutAll: '           ';
+        nextPutAll: name;
+        lf;
+        lf;
+        nextPutAll: 'Ride History:'; lf;
+        nextPutAll: 'Type        Ride ID    Pickup            Dropoff        Distance    Fare'; lf;
+        nextPutAll: '--------------------------------------------------------------------------'; lf.
+
+    requestedRides do: [ :eachRide |
+        eachRide rideDetails
+    ]
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:51:23.663211-07:00'!
+initializeWithID: anID pickup: aPickup dropoff: aDropoff distance: aDistance
+    rideID := anID.
+    pickupLocation := aPickup.
+    dropoffLocation := aDropoff.
+    distance := aDistance.
+    ^ self
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:51:23.708268-07:00'!
+rideID
+    ^ rideID
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:51:23.708855-07:00'!
+pickupLocation
+    ^ pickupLocation
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:51:23.70995-07:00'!
+dropoffLocation
+    ^ dropoffLocation
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:51:23.710442-07:00'!
+distance
+    ^ distance
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:51:23.710921-07:00'!
+fare
+    self subclassResponsibility
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:51:23.711305-07:00'!
+rideDetails
+    self subclassResponsibility
+! !!StandardRide methodsFor: 'nil' stamp: '2026-10-03T06:51:23.712009-07:00'!
+fare
+    ^ self distance * 2
+! !!StandardRide methodsFor: 'nil' stamp: '2026-10-03T06:51:23.712753-07:00'!
+rideDetails
+    Stdio stdout
+        nextPutAll: 'Standard    ';
+        nextPutAll: self rideID printString;
+        nextPutAll: '        ';
+        nextPutAll: self pickupLocation;
+        nextPutAll: '        ';
+        nextPutAll: self dropoffLocation;
+        nextPutAll: '        ';
+        nextPutAll: self distance printString;
+        nextPutAll: '          $';
+        nextPutAll: self fare printString;
+        lf
+! !!PremiumRide methodsFor: 'nil' stamp: '2026-10-03T06:51:23.713401-07:00'!
+fare
+    ^ self distance * 4
+! !!PremiumRide methodsFor: 'nil' stamp: '2026-10-03T06:51:23.714016-07:00'!
+rideDetails
+    Stdio stdout
+        nextPutAll: 'Premium     ';
+        nextPutAll: self rideID printString;
+        nextPutAll: '        ';
+        nextPutAll: self pickupLocation;
+        nextPutAll: '              ';
+        nextPutAll: self dropoffLocation;
+        nextPutAll: '       ';
+        nextPutAll: self distance printString;
+        nextPutAll: '           $';
+        nextPutAll: self fare printString;
+        lf
+! !!Driver methodsFor: 'nil' stamp: '2026-10-03T06:51:23.714794-07:00'!
+initializeWithID: anID name: aName rating: aRating
+    driverID := anID.
+    name := aName.
+    rating := aRating.
+    assignedRides := OrderedCollection new.
+    ^ self
+! !!Driver methodsFor: 'nil' stamp: '2026-10-03T06:51:23.715179-07:00'!
+addRide: aRide
+    assignedRides add: aRide
+! !!Driver methodsFor: 'nil' stamp: '2026-10-03T06:51:23.715929-07:00'!
+getDriverInfo
+    Stdio stdout
+        lf;
+        nextPutAll: '=== DRIVER INFORMATION ==='; lf;
+        nextPutAll: 'Driver ID    Name                Rating'; lf;
+        nextPutAll: '---------------------------------------'; lf;
+        nextPutAll: driverID printString;
+        nextPutAll: '            ';
+        nextPutAll: name;
+        nextPutAll: '          ';
+        nextPutAll: rating printString;
+        lf;
+        lf;
+        nextPutAll: 'Assigned Rides:'; lf;
+        nextPutAll: 'Type        Ride ID    Pickup            Dropoff        Distance    Fare'; lf;
+        nextPutAll: '--------------------------------------------------------------------------'; lf.
+
+    assignedRides do: [ :eachRide |
+        eachRide rideDetails
+    ]
+! !!Rider methodsFor: 'nil' stamp: '2026-10-03T06:51:23.716612-07:00'!
+initializeWithID: anID name: aName
+    riderID := anID.
+    name := aName.
+    requestedRides := OrderedCollection new.
+    ^ self
+! !!Rider methodsFor: 'nil' stamp: '2026-10-03T06:51:23.71695-07:00'!
+requestRide: aRide
+    requestedRides add: aRide
+! !!Rider methodsFor: 'nil' stamp: '2026-10-03T06:51:23.717548-07:00'!
+viewRides
+    Stdio stdout
+        lf;
+        nextPutAll: '=== RIDER INFORMATION ==='; lf;
+        nextPutAll: 'Rider ID     Name'; lf;
+        nextPutAll: '------------------------------'; lf;
+        nextPutAll: riderID printString;
+        nextPutAll: '           ';
+        nextPutAll: name;
+        lf;
+        lf;
+        nextPutAll: 'Ride History:'; lf;
+        nextPutAll: 'Type        Ride ID    Pickup            Dropoff        Distance    Fare'; lf;
+        nextPutAll: '--------------------------------------------------------------------------'; lf.
+
+    requestedRides do: [ :eachRide |
+        eachRide rideDetails
+    ]
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:52:01.48137-07:00'!
+initializeWithID: anID pickup: aPickup dropoff: aDropoff distance: aDistance
+    rideID := anID.
+    pickupLocation := aPickup.
+    dropoffLocation := aDropoff.
+    distance := aDistance.
+    ^ self
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:52:01.525277-07:00'!
+rideID
+    ^ rideID
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:52:01.525857-07:00'!
+pickupLocation
+    ^ pickupLocation
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:52:01.526991-07:00'!
+dropoffLocation
+    ^ dropoffLocation
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:52:01.527516-07:00'!
+distance
+    ^ distance
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:52:01.527972-07:00'!
+fare
+    self subclassResponsibility
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:52:01.528361-07:00'!
+rideDetails
+    self subclassResponsibility
+! !!StandardRide methodsFor: 'nil' stamp: '2026-10-03T06:52:01.52908-07:00'!
+fare
+    ^ self distance * 2
+! !!StandardRide methodsFor: 'nil' stamp: '2026-10-03T06:52:01.529822-07:00'!
+rideDetails
+    Stdio stdout
+        nextPutAll: 'Standard    ';
+        nextPutAll: self rideID printString;
+        nextPutAll: '        ';
+        nextPutAll: self pickupLocation;
+        nextPutAll: '        ';
+        nextPutAll: self dropoffLocation;
+        nextPutAll: '        ';
+        nextPutAll: self distance printString;
+        nextPutAll: '          $';
+        nextPutAll: self fare printString;
+        lf
+! !!PremiumRide methodsFor: 'nil' stamp: '2026-10-03T06:52:01.530476-07:00'!
+fare
+    ^ self distance * 4
+! !!PremiumRide methodsFor: 'nil' stamp: '2026-10-03T06:52:01.531063-07:00'!
+rideDetails
+    Stdio stdout
+        nextPutAll: 'Premium     ';
+        nextPutAll: self rideID printString;
+        nextPutAll: '        ';
+        nextPutAll: self pickupLocation;
+        nextPutAll: '              ';
+        nextPutAll: self dropoffLocation;
+        nextPutAll: '       ';
+        nextPutAll: self distance printString;
+        nextPutAll: '           $';
+        nextPutAll: self fare printString;
+        lf
+! !!Driver methodsFor: 'nil' stamp: '2026-10-03T06:52:01.531858-07:00'!
+initializeWithID: anID name: aName rating: aRating
+    driverID := anID.
+    name := aName.
+    rating := aRating.
+    assignedRides := OrderedCollection new.
+    ^ self
+! !!Driver methodsFor: 'nil' stamp: '2026-10-03T06:52:01.532227-07:00'!
+addRide: aRide
+    assignedRides add: aRide
+! !!Driver methodsFor: 'nil' stamp: '2026-10-03T06:52:01.532938-07:00'!
+getDriverInfo
+    Stdio stdout
+        lf;
+        nextPutAll: '=== DRIVER INFORMATION ==='; lf;
+        nextPutAll: 'Driver ID    Name                Rating'; lf;
+        nextPutAll: '---------------------------------------'; lf;
+        nextPutAll: driverID printString;
+        nextPutAll: '            ';
+        nextPutAll: name;
+        nextPutAll: '          ';
+        nextPutAll: rating printString;
+        lf;
+        lf;
+        nextPutAll: 'Assigned Rides:'; lf;
+        nextPutAll: 'Type        Ride ID    Pickup            Dropoff        Distance    Fare'; lf;
+        nextPutAll: '--------------------------------------------------------------------------'; lf.
+
+    assignedRides do: [ :eachRide |
+        eachRide rideDetails
+    ]
+! !!Rider methodsFor: 'nil' stamp: '2026-10-03T06:52:01.533615-07:00'!
+initializeWithID: anID name: aName
+    riderID := anID.
+    name := aName.
+    requestedRides := OrderedCollection new.
+    ^ self
+! !!Rider methodsFor: 'nil' stamp: '2026-10-03T06:52:01.533966-07:00'!
+requestRide: aRide
+    requestedRides add: aRide
+! !!Rider methodsFor: 'nil' stamp: '2026-10-03T06:52:01.534587-07:00'!
+viewRides
+    Stdio stdout
+        lf;
+        nextPutAll: '=== RIDER INFORMATION ==='; lf;
+        nextPutAll: 'Rider ID     Name'; lf;
+        nextPutAll: '------------------------------'; lf;
+        nextPutAll: riderID printString;
+        nextPutAll: '           ';
+        nextPutAll: name;
+        lf;
+        lf;
+        nextPutAll: 'Ride History:'; lf;
+        nextPutAll: 'Type        Ride ID    Pickup            Dropoff        Distance    Fare'; lf;
+        nextPutAll: '--------------------------------------------------------------------------'; lf.
+
+    requestedRides do: [ :eachRide |
+        eachRide rideDetails
+    ]
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:52:05.627182-07:00'!
+initializeWithID: anID pickup: aPickup dropoff: aDropoff distance: aDistance
+    rideID := anID.
+    pickupLocation := aPickup.
+    dropoffLocation := aDropoff.
+    distance := aDistance.
+    ^ self
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:52:05.671614-07:00'!
+rideID
+    ^ rideID
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:52:05.672197-07:00'!
+pickupLocation
+    ^ pickupLocation
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:52:05.673316-07:00'!
+dropoffLocation
+    ^ dropoffLocation
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:52:05.673855-07:00'!
+distance
+    ^ distance
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:52:05.674311-07:00'!
+fare
+    self subclassResponsibility
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:52:05.674717-07:00'!
+rideDetails
+    self subclassResponsibility
+! !!StandardRide methodsFor: 'nil' stamp: '2026-10-03T06:52:05.675419-07:00'!
+fare
+    ^ self distance * 2
+! !!StandardRide methodsFor: 'nil' stamp: '2026-10-03T06:52:05.676117-07:00'!
+rideDetails
+    Stdio stdout
+        nextPutAll: 'Standard    ';
+        nextPutAll: self rideID printString;
+        nextPutAll: '        ';
+        nextPutAll: self pickupLocation;
+        nextPutAll: '        ';
+        nextPutAll: self dropoffLocation;
+        nextPutAll: '        ';
+        nextPutAll: self distance printString;
+        nextPutAll: '          $';
+        nextPutAll: self fare printString;
+        lf
+! !!PremiumRide methodsFor: 'nil' stamp: '2026-10-03T06:52:05.676778-07:00'!
+fare
+    ^ self distance * 4
+! !!PremiumRide methodsFor: 'nil' stamp: '2026-10-03T06:52:05.677416-07:00'!
+rideDetails
+    Stdio stdout
+        nextPutAll: 'Premium     ';
+        nextPutAll: self rideID printString;
+        nextPutAll: '        ';
+        nextPutAll: self pickupLocation;
+        nextPutAll: '              ';
+        nextPutAll: self dropoffLocation;
+        nextPutAll: '       ';
+        nextPutAll: self distance printString;
+        nextPutAll: '           $';
+        nextPutAll: self fare printString;
+        lf
+! !!Driver methodsFor: 'nil' stamp: '2026-10-03T06:52:05.678179-07:00'!
+initializeWithID: anID name: aName rating: aRating
+    driverID := anID.
+    name := aName.
+    rating := aRating.
+    assignedRides := OrderedCollection new.
+    ^ self
+! !!Driver methodsFor: 'nil' stamp: '2026-10-03T06:52:05.678558-07:00'!
+addRide: aRide
+    assignedRides add: aRide
+! !!Driver methodsFor: 'nil' stamp: '2026-10-03T06:52:05.679312-07:00'!
+getDriverInfo
+    Stdio stdout
+        lf;
+        nextPutAll: '=== DRIVER INFORMATION ==='; lf;
+        nextPutAll: 'Driver ID    Name                Rating'; lf;
+        nextPutAll: '---------------------------------------'; lf;
+        nextPutAll: driverID printString;
+        nextPutAll: '            ';
+        nextPutAll: name;
+        nextPutAll: '          ';
+        nextPutAll: rating printString;
+        lf;
+        lf;
+        nextPutAll: 'Assigned Rides:'; lf;
+        nextPutAll: 'Type        Ride ID    Pickup            Dropoff        Distance    Fare'; lf;
+        nextPutAll: '--------------------------------------------------------------------------'; lf.
+
+    assignedRides do: [ :eachRide |
+        eachRide rideDetails
+    ]
+! !!Rider methodsFor: 'nil' stamp: '2026-10-03T06:52:05.679921-07:00'!
+initializeWithID: anID name: aName
+    riderID := anID.
+    name := aName.
+    requestedRides := OrderedCollection new.
+    ^ self
+! !!Rider methodsFor: 'nil' stamp: '2026-10-03T06:52:05.680267-07:00'!
+requestRide: aRide
+    requestedRides add: aRide
+! !!Rider methodsFor: 'nil' stamp: '2026-10-03T06:52:05.680822-07:00'!
+viewRides
+    Stdio stdout
+        lf;
+        nextPutAll: '=== RIDER INFORMATION ==='; lf;
+        nextPutAll: 'Rider ID     Name'; lf;
+        nextPutAll: '------------------------------'; lf;
+        nextPutAll: riderID printString;
+        nextPutAll: '           ';
+        nextPutAll: name;
+        lf;
+        lf;
+        nextPutAll: 'Ride History:'; lf;
+        nextPutAll: 'Type        Ride ID    Pickup            Dropoff        Distance    Fare'; lf;
+        nextPutAll: '--------------------------------------------------------------------------'; lf.
+
+    requestedRides do: [ :eachRide |
+        eachRide rideDetails
+    ]
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:53:39.389745-07:00'!
+initializeWithID: anID pickup: aPickup dropoff: aDropoff distance: aDistance
+    rideID := anID.
+    pickupLocation := aPickup.
+    dropoffLocation := aDropoff.
+    distance := aDistance.
+    ^ self
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:53:39.4343-07:00'!
+rideID
+    ^ rideID
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:53:39.434865-07:00'!
+pickupLocation
+    ^ pickupLocation
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:53:39.436005-07:00'!
+dropoffLocation
+    ^ dropoffLocation
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:53:39.436534-07:00'!
+distance
+    ^ distance
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:53:39.43699-07:00'!
+fare
+    self subclassResponsibility
+! !!Ride methodsFor: 'nil' stamp: '2026-10-03T06:53:39.437385-07:00'!
+rideDetails
+    self subclassResponsibility
+! !!StandardRide methodsFor: 'nil' stamp: '2026-10-03T06:53:39.438104-07:00'!
+fare
+    ^ self distance * 2
+! !!StandardRide methodsFor: 'nil' stamp: '2026-10-03T06:53:39.438852-07:00'!
+rideDetails
+    Stdio stdout
+        nextPutAll: 'Standard    ';
+        nextPutAll: self rideID printString;
+        nextPutAll: '        ';
+        nextPutAll: self pickupLocation;
+        nextPutAll: '        ';
+        nextPutAll: self dropoffLocation;
+        nextPutAll: '        ';
+        nextPutAll: self distance printString;
+        nextPutAll: '          $';
+        nextPutAll: self fare printString;
+        lf
+! !!PremiumRide methodsFor: 'nil' stamp: '2026-10-03T06:53:39.439537-07:00'!
+fare
+    ^ self distance * 4
+! !!PremiumRide methodsFor: 'nil' stamp: '2026-10-03T06:53:39.440171-07:00'!
+rideDetails
+    Stdio stdout
+        nextPutAll: 'Premium     ';
+        nextPutAll: self rideID printString;
+        nextPutAll: '        ';
+        nextPutAll: self pickupLocation;
+        nextPutAll: '              ';
+        nextPutAll: self dropoffLocation;
+        nextPutAll: '       ';
+        nextPutAll: self distance printString;
+        nextPutAll: '           $';
+        nextPutAll: self fare printString;
+        lf
+! !!Driver methodsFor: 'nil' stamp: '2026-10-03T06:53:39.44096-07:00'!
+initializeWithID: anID name: aName rating: aRating
+    driverID := anID.
+    name := aName.
+    rating := aRating.
+    assignedRides := OrderedCollection new.
+    ^ self
+! !!Driver methodsFor: 'nil' stamp: '2026-10-03T06:53:39.441362-07:00'!
+addRide: aRide
+    assignedRides add: aRide
+! !!Driver methodsFor: 'nil' stamp: '2026-10-03T06:53:39.442077-07:00'!
+getDriverInfo
+    Stdio stdout
+        lf;
+        nextPutAll: '=== DRIVER INFORMATION ==='; lf;
+        nextPutAll: 'Driver ID    Name                Rating'; lf;
+        nextPutAll: '---------------------------------------'; lf;
+        nextPutAll: driverID printString;
+        nextPutAll: '            ';
+        nextPutAll: name;
+        nextPutAll: '          ';
+        nextPutAll: rating printString;
+        lf;
+        lf;
+        nextPutAll: 'Assigned Rides:'; lf;
+        nextPutAll: 'Type        Ride ID    Pickup            Dropoff        Distance    Fare'; lf;
+        nextPutAll: '--------------------------------------------------------------------------'; lf.
+
+    assignedRides do: [ :eachRide |
+        eachRide rideDetails
+    ]
+! !!Rider methodsFor: 'nil' stamp: '2026-10-03T06:53:39.442747-07:00'!
+initializeWithID: anID name: aName
+    riderID := anID.
+    name := aName.
+    requestedRides := OrderedCollection new.
+    ^ self
+! !!Rider methodsFor: 'nil' stamp: '2026-10-03T06:53:39.443098-07:00'!
+requestRide: aRide
+    requestedRides add: aRide
+! !!Rider methodsFor: 'nil' stamp: '2026-10-03T06:53:39.443703-07:00'!
+viewRides
+    Stdio stdout
+        lf;
+        nextPutAll: '=== RIDER INFORMATION ==='; lf;
+        nextPutAll: 'Rider ID     Name'; lf;
+        nextPutAll: '------------------------------'; lf;
+        nextPutAll: riderID printString;
+        nextPutAll: '           ';
+        nextPutAll: name;
+        lf;
+        lf;
+        nextPutAll: 'Ride History:'; lf;
+        nextPutAll: 'Type        Ride ID    Pickup            Dropoff        Distance    Fare'; lf;
+        nextPutAll: '--------------------------------------------------------------------------'; lf.
+
+    requestedRides do: [ :eachRide |
+        eachRide rideDetails
+    ]
+! !

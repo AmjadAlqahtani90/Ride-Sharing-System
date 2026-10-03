@@ -1,0 +1,80 @@
+OOP ideas in the project:
+
+private data
+
+The attributes are private, so outside code cannot directly do something like: 
+ride.distance = 100; 
+Instead, access happens through methods such as: 
+getDistance()
+That demonstrate encapsulation.
+
+
+Encapsulation
+virtual fare()
+allows Polymorphism later
+
+
+
+class StandardRide : public Ride
+
+demonstrates inheritance.
+StandardRide inherits the information and behavior of Ride.
+
+
+
+This is important for your report because both subclasses override fare().
+
+
+Step 4: Demonstrate polymorphism
+This is probably the most important part of the assignment.
+Create different objects:
+StandardRide ride1(
+    101,
+    "University",
+    "Airport",
+    10
+);
+
+PremiumRide ride2(
+    102,
+    "Mall",
+    "Downtown",
+    8
+);
+
+
+
+
+
+
+Notice:
+private:
+    vector<Ride*> assignedRides;
+
+The user cannot directly manipulate the list.
+Instead:
+driver.addRide(&ride1);
+
+This is another example of encapsulation.
+
+
+
+
+
+
+
+Again:
+requestedRides
+       ↓
+private
+
+requestRide()
+viewRides()
+       ↓
+controlled access
+
+That is encapsulation.
+
+
+
+
